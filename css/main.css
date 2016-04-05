@@ -82,20 +82,20 @@ GALLERY
 *************/
 
 a {
-    margin-top: 30px;
-    margin-bottom: 30px;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 .gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 .gallery img {
-    width: 200px;
-    height: 200px;
-    margin: 0 15px;
+  width: 200px;
+  height: 200px;
+  margin: 0 15px;
 }
 
 
@@ -111,18 +111,19 @@ OVERLAY
   position:absolute;
   top:0;
   left:0;
-  display: none;
-  text-align:center;
+	display: none;
+	text-align:center;
 }
 
 #overlay img {
- margin-top: 3%;
- width: 600px;
- height: 75%; 
+	margin-top: 3%;
+	width: 600px;
+	height: 75%; 
 }
 
 #overlay p {
- color:white; 
+	max-width: 600px;
+	color: #fff; 
 }
 
 

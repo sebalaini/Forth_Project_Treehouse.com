@@ -21,6 +21,7 @@ $("#search").keyup(function() {
 });
 
 
+
 //Problem: when the user click on an image goes to a dead end
 //Solution: Create an overlay with the large image
 
@@ -48,7 +49,7 @@ $(".gallery a").click(function(event){
   $overlay.show();
   
   //Get child's alt attribute and set caption
-  var captionText = $(this).children("img").attr("span");
+  var captionText = $(this).find('span').text();
   $caption.text(captionText);
 });
 
@@ -59,6 +60,8 @@ $overlay.click(function(){
 
 
 
+//Problem: Miss the next and prev. buttons
+//Solution: Create a buttons
 
 
 
