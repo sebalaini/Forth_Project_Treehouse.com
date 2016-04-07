@@ -49,7 +49,6 @@ $(".gallery a").click(function(event){
   $overlay.show();
 });
 
-
 function loadInfo(item){
     var imageLocation = item.attr("href");
     //Update overlay with the image linked in the link
@@ -58,16 +57,13 @@ function loadInfo(item){
     //Get child's span element text and set caption
     var captionText = item.find('span').text();
     $caption.text(captionText);
-    
-    //Guardamos el index de esta imagen como la seleccionada
-    selected = item.index();
-    
 }
 
 //When overlay is clicked hide it
 $overlay.click(function(){
   $overlay.hide();
 });
+
 
 
 
