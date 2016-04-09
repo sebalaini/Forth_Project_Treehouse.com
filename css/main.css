@@ -117,10 +117,51 @@ OVERLAY
 }
 
 #overlay p {
-	max-width: 600px;
+	max-width: 550px;
 	color: #fff; 
 }
 
+
+
+/*************
+BUTTONS
+*************/
+
+#btnClose{
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  font-size: 2em;
+   background-color: rgba(0,0,0,0.0);
+  color: #777;
+  border: none;
+}
+
+#btnPrev {
+
+  position: absolute;
+  float: left;
+  top: 45%;
+  left: 20%;
+  font-size: 2em;
+  background-color: rgba(0,0,0,0);
+  color: #777;
+  border: none;
+
+}
+
+#btnNext {
+
+  position: absolute;
+  float: right;
+  top: 45%;
+  right: 20%;
+  font-size: 2em;
+  background-color: rgba(0,0,0,0.0);
+  color: #777;
+  border: none;
+
+}
 
 
 

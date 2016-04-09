@@ -1,26 +1,34 @@
+/*************
+LIVE SEARCH
+*************/
+
 //Problem: when the user write in the input form he want to find a photo 
 //Solution: Create a live search
 
 //targets search bar and initiates function
 $("#search").keyup(function() {
-    var search = $(this).val();
-    console.log(search);
-    $(".gallery img").each(function() {
+  var search = $(this).val();
+  console.log(search);
+  $(".gallery img").each(function() {
     
-    //use alt attribute to filter through alt attribute
-    console.log($(this).attr("alt").search); 
-        var searchAttr = $(this).attr("alt");
+  //use alt attribute to filter through alt attribute
+  console.log($(this).attr("alt").search); 
+    var searchAttr = $(this).attr("alt");
         
-    if(searchAttr.toLowerCase().search(search.toLowerCase()) > -1 ) {
-        $(this).show();
-        } 
-    else {
-        $(this).fadeOut();
-        }
+  if(searchAttr.toLowerCase().search(search.toLowerCase()) > -1 ) {
+    $(this).fadeIn(); 
+    } 
+  else {
+    $(this).fadeOut();
+    }
   });
 });
 
 
+
+/*************
+OVERLAY
+*************/
 
 //Problem: when the user click on an image goes to a dead end
 //Solution: Create an overlay with the large image
@@ -29,12 +37,19 @@ var $overlay = $('<div id="overlay"></div>');
 var $image = $("<img>");
 var $caption = $("<p></p>");
 var selected;
+var $index;
+var overlayActive = false;
 
 //An image to overlay
 $overlay.append($image);
 
 //A caption to overlay
 $overlay.append($caption);
+
+//add a buttons
+$overlay.add().append("<button id='btnPrev'> < </button>");
+$overlay.add().append("<button id='btnClose'> X </button>");
+$overlay.add().append("<button id='btnNext'> > </button>");
 
 //Add overlay
 $(".gallery").append($overlay);
@@ -44,28 +59,88 @@ $(".gallery a").click(function(event){
   event.preventDefault();
   
   loadInfo($(this));
+
+  //Get the index of the item
+  $index = $(this).index();
   
   //Show the overlay.
-  $overlay.show();
+  $overlay.fadeIn();
+  overlayActive = true;
 });
 
 function loadInfo(item){
-    var imageLocation = item.attr("href");
-    //Update overlay with the image linked in the link
-    $image.attr("src", imageLocation);
+  // Get item image path
+  var imageLocation = item.attr("href");
+  //Set overlay image src
+  $image.attr("src", imageLocation);
     
-    //Get child's span element text and set caption
-    var captionText = item.find('span').text();
-    $caption.text(captionText);
-}
+  //Get item child's span text
+  var captionText = item.find('span').text();
+  //Set overlay caption text
+  $caption.text(captionText);
+};
 
-//When overlay is clicked hide it
-$overlay.click(function(){
-  $overlay.hide();
+
+
+/*************
+BUTTONS
+*************/
+
+//Problem: when the user open an image can't change it 
+//Solution: Create a next and previous button
+
+//prev next button function
+var PrevNextBtns = function(prev) {
+
+  //Set the condition
+  if(!prev) { $index++; }
+  else { $index--; }
+  
+  //Set the lenght of the gallery
+  $galleryLength = $('.gallery a').length;
+
+  //If the image is out of index, reset
+  if ($index < 0) { $index = $galleryLength-1;}
+  else if ($index == $galleryLength) { $index = 0; }
+ 
+  //UpdateImage (imageLocation, imageCaption);
+  indext2nthchild = parseInt($index)+1;
+  loadInfo($('.gallery a:nth-child('+indext2nthchild+')'));
+};
+
+
+
+//Button events - CLICK
+
+$("#btnPrev").click(function(event){
+  PrevNextBtns(true);
 });
 
+$("#btnNext").click(function(event){
+  PrevNextBtns();
+});
 
+//Keyboard events
+//Left : 37
+//Right : 39
+$( window ).keyup(function(e) {
+  KeyboardKey = e.which;
+  
+  if(overlayActive){
+    if (KeyboardKey == '37'){
+      PrevNextBtns(true);
+    } 
+    else if (KeyboardKey == '39'){
+      PrevNextBtns();
+    }
+  }
+});
 
+// Exit button
+$("#btnClose").click(function(){
+  $overlay.fadeOut();
+    overlayActive = false;
+});
 
 
 
