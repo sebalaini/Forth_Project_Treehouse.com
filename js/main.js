@@ -35,7 +35,7 @@ OVERLAY
 
 var $overlay = $('<div id="overlay"></div>');
 var $image = $("<img>");
-var $videos = $("<iframe> </iframe>" );
+var $videos = $("<iframe frameborder='0' allowfullscreen></iframe>");
 var $caption = $("<p></p>");
 var selected;
 var $index;
@@ -77,10 +77,11 @@ $(".gallery a").click(function(event){
 
 function loadInfo(item){
 
-if ($("gallery a href").hasClass("video")) {
+if ($("gallery a").hasClass("video")) {
   $overlay.append($videos);
 } else {
-$overlay.append($image);};
+$overlay.append($image);
+};
 
 
 //A caption to overlay
