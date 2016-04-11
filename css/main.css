@@ -9,6 +9,8 @@ GENERAL
 	margin: 0 auto
 }
 
+header,
+footer,
 .wrapper,
 .gallery {
 	max-width: 980px;
@@ -32,6 +34,16 @@ header {
 	position: fixed;
 	width: 100%;
 	top: 0;
+}
+
+
+
+/*************
+FOOTER
+*************/
+
+footer {
+	margin-bottom: 30px;
 }
 
 
@@ -103,7 +115,7 @@ OVERLAY
   background: rgba(0,0,0,0.85);
   width: 100%;
   height: 100%;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
 	display: none;
@@ -124,7 +136,7 @@ OVERLAY
 
 
 /*************
-BUTTONS
+OVERLAY
 *************/
 
 #btnClose{
@@ -162,8 +174,6 @@ BUTTONS
   border: none;
 
 }
-
-
 
 
 

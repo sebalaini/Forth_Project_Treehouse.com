@@ -35,7 +35,7 @@ OVERLAY
 
 var $overlay = $('<div id="overlay"></div>');
 var $image = $("<img>");
-var $videos = $("<iframe> </iframe>" );
+var $video = $("<iframe> </iframe>" );
 var $caption = $("<p></p>");
 var selected;
 var $index;
@@ -44,19 +44,26 @@ var overlayActive = false;
 
 
 /*************
-BUTTONS
+VIDEO
 *************/
+
+
+
+
+/*************
+IMG
+*************/
+
+//An image to overlay
+$overlay.append($image);
+
+//A caption to overlay
+$overlay.append($caption);
 
 //add a buttons
 $overlay.add().append("<button id='btnPrev'> < </button>");
 $overlay.add().append("<button id='btnClose'> X </button>");
 $overlay.add().append("<button id='btnNext'> > </button>");
-
-
-
-/*************
-OVERLAY
-*************/
 
 //Add overlay
 $(".gallery").append($overlay);
@@ -76,17 +83,6 @@ $(".gallery a").click(function(event){
 });
 
 function loadInfo(item){
-
-if ($("gallery a href").hasClass("video")) {
-  $overlay.append($videos);
-} else {
-$overlay.append($image);};
-
-
-//A caption to overlay
-$overlay.append($caption);
-
-
   // Get item image path
   var imageLocation = item.attr("href");
   //Set overlay image src
