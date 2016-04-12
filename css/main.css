@@ -78,9 +78,6 @@ input[type="search"]:focus {
 	background-color: #cefcfa;
 }
 
-a {
-	text-decoration: none;
-}
 
 
 /*************
@@ -88,6 +85,7 @@ GALLERY
 *************/
 
 a {
+	text-decoration: none;
   margin-top: 20px;
   margin-bottom: 30px;
 }
