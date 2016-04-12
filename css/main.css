@@ -122,7 +122,8 @@ OVERLAY
 	text-align: center;
 }
 
-#overlay img {
+#overlay img,
+#overlay iframe {
 	margin-top: 5%;
 	width: 600px;
 	height: 75%; 
@@ -136,7 +137,7 @@ OVERLAY
 
 
 /*************
-OVERLAY
+BUTTONS
 *************/
 
 #btnClose{

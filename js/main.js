@@ -35,7 +35,7 @@ OVERLAY
 
 var $overlay = $('<div id="overlay"></div>');
 var $image = $("<img>");
-var $videos = $("<iframe frameborder='0' allowfullscreen></iframe>");
+var $videos = $("<iframe frameborder='0' allowfullscreen> </iframe>");
 var $caption = $("<p></p>");
 var selected;
 var $index;
@@ -75,18 +75,25 @@ $(".gallery a").click(function(event){
   overlayActive = true;
 });
 
+  //.append a img or iframe to a overlay
 function loadInfo(item){
 
-if ($("gallery a").hasClass("video")) {
+if (item.hasClass("video")) {
   $overlay.append($videos);
+  $image.detach()
 } else {
 $overlay.append($image);
+$videos.detach();
 };
 
 
 //A caption to overlay
 $overlay.append($caption);
 
+// Get item video path
+  var videoLocation = item.attr("href");
+  //Set overlay image src
+  $videos.attr("src", videoLocation);
 
   // Get item image path
   var imageLocation = item.attr("href");
@@ -158,6 +165,7 @@ $( window ).keyup(function(e) {
 // Exit button
 $("#btnClose").click(function(){
   $overlay.fadeOut();
+  $videos.detach();
     overlayActive = false;
 });
 
