@@ -8,10 +8,10 @@ LIVE SEARCH
 //targets search bar and initiates function
 $("#search").keyup(function() {
   var search = $(this).val();
-  $(".gallery img").each(function() {
+$(".gallery img").each(function() {
     
   //use alt attribute to filter through alt attribute 
-    var searchAttr = $(this).attr("alt");
+  var searchAttr = $(this).attr("alt");
         
   if(searchAttr.toLowerCase().search(search.toLowerCase()) > -1 ) {
     $(this).fadeIn(); 
@@ -41,7 +41,7 @@ $(this).focusout(function(){
 
 
 /*************
-OVERLAY
+OVERLAY VAR
 *************/
 
 //Problem: when the user click on an image goes to a dead end
@@ -58,7 +58,7 @@ var overlayActive = false;
 
 
 /*************
-BUTTONS
+BUTTONS TO OVERLAY
 *************/
 
 //add a buttons
@@ -86,7 +86,7 @@ $(".gallery a").click(function(event){
   
   //Show the overlay.
   $overlay.fadeIn();
-  overlayActive = true;
+    overlayActive = true;
 });
 
   //.append a img or iframe to a overlay
@@ -94,10 +94,10 @@ function loadInfo(item){
 
 if (item.hasClass("video")) {
   $overlay.append($videos);
-  $image.detach()
-} else {
+    $image.detach()} 
+  else {
 $overlay.append($image);
-$videos.detach();
+  $videos.detach();
 };
 
 
@@ -134,14 +134,14 @@ var PrevNextBtns = function(prev) {
 
   //Set the condition
   if(!prev) { $index++; }
-  else { $index--; }
+    else { $index--; }
   
   //Set the lenght of the gallery
   $galleryLength = $('.gallery a').length;
 
   //If the image is out of index, reset
   if ($index < 0) { $index = $galleryLength-1;}
-  else if ($index == $galleryLength) { $index = 0; }
+    else if ($index == $galleryLength) { $index = 0; }
  
   //UpdateImage (imageLocation, imageCaption);
   indext2nthchild = parseInt($index)+1;
@@ -170,19 +170,17 @@ $( window ).keyup(function(e) {
   
   if(overlayActive){
     if (KeyboardKey == '37'){
-      PrevNextBtns(true);
-    } 
+      PrevNextBtns(true);} 
     else if (KeyboardKey == '39'){
-      PrevNextBtns();
-    }
+      PrevNextBtns();}
   }
 });
 
 // Exit button
 $("#btnClose").click(function(){
   $overlay.fadeOut();
-  $videos.detach();
-    overlayActive = false;
+    $videos.detach();
+      overlayActive = false;
 });
 
 
