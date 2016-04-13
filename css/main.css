@@ -13,7 +13,7 @@ header,
 footer,
 .wrapper,
 .gallery {
-	max-width: 980px;
+	max-width: 1040px;
   text-align: center;
 }
 
@@ -31,6 +31,7 @@ header {
 	position: fixed;
 	width: 100%;
 	top: 0;
+	background-color: #fff;
 }
 
 
@@ -97,7 +98,7 @@ a {
 .gallery img {
   width: 200px;
   height: 200px;
-  margin: 0 15px;
+  margin: 0 30px;
 }
 
 
