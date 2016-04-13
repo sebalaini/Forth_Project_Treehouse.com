@@ -8,11 +8,9 @@ LIVE SEARCH
 //targets search bar and initiates function
 $("#search").keyup(function() {
   var search = $(this).val();
-  console.log(search);
   $(".gallery img").each(function() {
     
-  //use alt attribute to filter through alt attribute
-  console.log($(this).attr("alt").search); 
+  //use alt attribute to filter through alt attribute 
     var searchAttr = $(this).attr("alt");
         
   if(searchAttr.toLowerCase().search(search.toLowerCase()) > -1 ) {
@@ -136,7 +134,9 @@ var PrevNextBtns = function(prev) {
 
 
 
-//Button events - CLICK
+/*************
+BUTTONS EVENT CLICK
+*************/
 
 $("#btnPrev").click(function(event){
   PrevNextBtns(true);

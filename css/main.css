@@ -4,9 +4,9 @@ GENERAL
 
 * {
 	text-decoration: none;
-	color: #000;
+	color: #fff;
 	box-sizing: border-box;
-	margin: 0 auto
+	margin: 0 auto;
 }
 
 header,
@@ -14,13 +14,10 @@ footer,
 .wrapper,
 .gallery {
 	max-width: 980px;
-  margin: 0 auto;
   text-align: center;
-  background: #fff;
 }
 
 span {
-	color: #fff;
 	display: none;
 }
 
@@ -65,7 +62,7 @@ input[type="search"] {
   width: 460px;
   background-color: #e0e2e2;
   color: #8a97a0;
-  box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+  box-shadow: 0 2px 0 rgba(0,0,0,0.04) inset;
   margin-top: 25px;
 	margin-bottom: 20px; 
 }
@@ -138,14 +135,21 @@ OVERLAY
 BUTTONS
 *************/
 
-#btnClose{
+#btnClose,
+#btnPrev,
+#btnNext {
+  font-size: 3em;
+  background-color: rgba(0,0,0,0.0);
+  color: #777;
+  border: none; 
+}
+
+
+#btnClose {
   position: absolute;
   top: 5%;
   right: 5%;
   font-size: 2em;
-   background-color: rgba(0,0,0,0.0);
-  color: #777;
-  border: none;
 }
 
 #btnPrev {
@@ -154,11 +158,6 @@ BUTTONS
   float: left;
   top: 45%;
   left: 20%;
-  font-size: 2em;
-  background-color: rgba(0,0,0,0);
-  color: #777;
-  border: none;
-
 }
 
 #btnNext {
@@ -167,11 +166,6 @@ BUTTONS
   float: right;
   top: 45%;
   right: 20%;
-  font-size: 2em;
-  background-color: rgba(0,0,0,0.0);
-  color: #777;
-  border: none;
-
 }
 
 
