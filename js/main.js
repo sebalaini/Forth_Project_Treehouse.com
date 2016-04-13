@@ -23,6 +23,22 @@ $("#search").keyup(function() {
 });
 
 
+/*************
+HIDE PLACEHOLDER ON CLICK
+*************/
+
+$("input").each(function() {
+    $(this).data('holder',$(this).attr('placeholder'));
+    $(this).focusin(function(){
+    $(this).attr('placeholder','');
+  });
+
+$(this).focusout(function(){
+    $(this).attr('placeholder',$(this).data('holder'));
+  });
+});
+
+
 
 /*************
 OVERLAY
