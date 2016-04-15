@@ -1,0 +1,128 @@
+@media screen and (min-width: 320px) {
+
+header,
+footer,
+.wrapper,
+.gallery {
+	max-width: 400px;
+}
+
+.gallery img {
+  width: 220px;
+  height: 220px;
+}
+
+input[type="search"] {
+  width: 200px;
+}
+
+#overlay img,
+#overlay iframe {
+	margin-top: 320px;
+	width: 250px;
+	height: 30%; 
+}
+
+#overlay p {
+	max-width: 300px;
+}
+
+#btnPrev {
+
+  position: absolute;
+  float: left;
+  top: 45%;
+  left: 5%;
+}
+
+#btnNext {
+
+  position: absolute;
+  float: right;
+  top: 45%;
+  right: 5%;
+}
+
+}
+
+
+
+@media screen and (min-width: 768px) {
+
+header,
+footer,
+.wrapper,
+.gallery {
+	max-width: 900px;
+}
+
+.gallery img {
+  width: 180px;
+  height: 180px;
+}
+
+input[type="search"] {
+  width: 350px;
+}
+
+#overlay img,
+#overlay iframe {
+	margin-top: 230px;
+	width: 450px;
+	height: 50%; 
+}
+
+#overlay p {
+	max-width: 400px;
+}
+
+#btnPrev {
+  left: 10%;
+}
+
+#btnNext {
+  right: 10%;
+}
+
+}
+
+
+
+@media screen and (min-width: 1200px) {
+
+header,
+footer,
+.wrapper,
+.gallery {
+	max-width: 1040px;
+}
+
+.gallery img {
+  width: 200px;
+  height: 200px;
+}
+
+input[type="search"] {
+  width: 460px;
+}
+
+#overlay img,
+#overlay iframe {
+	margin-top: 145px;
+	width: 600px;
+	height: 65%;  
+}
+
+#overlay p {
+	max-width: 550px;
+}
+
+#btnPrev {
+  left: 15%;
+}
+
+#btnNext {
+  right: 15%;
+}
+
+}

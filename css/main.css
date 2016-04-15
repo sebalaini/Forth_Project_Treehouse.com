@@ -13,12 +13,15 @@ header,
 footer,
 .wrapper,
 .gallery {
-	max-width: 1040px;
   text-align: center;
 }
 
 span {
 	display: none;
+}
+
+p {
+	color: black;
 }
 
 
@@ -41,6 +44,7 @@ FOOTER
 *************/
 
 footer {
+	margin-top: 20px;	
 	margin-bottom: 30px;
 }
 
@@ -60,7 +64,6 @@ input[type="search"] {
   margin: 0 auto;
   outline: 0;
   padding: 10px;
-  width: 460px;
   background-color: #e0e2e2;
   color: #8a97a0;
   box-shadow: 0 2px 0 rgba(0,0,0,0.04) inset;
@@ -96,8 +99,6 @@ a {
 }
 
 .gallery img {
-  width: 200px;
-  height: 200px;
   margin: 0 30px;
 }
 
@@ -118,15 +119,7 @@ OVERLAY
 	text-align: center;
 }
 
-#overlay img,
-#overlay iframe {
-	margin-top: 5%;
-	width: 600px;
-	height: 75%; 
-}
-
 #overlay p {
-	max-width: 550px;
 	color: #fff; 
 }
 
@@ -145,28 +138,11 @@ BUTTONS
   border: none; 
 }
 
-
 #btnClose {
   position: absolute;
   top: 5%;
   right: 5%;
   font-size: 2em;
-}
-
-#btnPrev {
-
-  position: absolute;
-  float: left;
-  top: 45%;
-  left: 20%;
-}
-
-#btnNext {
-
-  position: absolute;
-  float: right;
-  top: 45%;
-  right: 20%;
 }
 
 

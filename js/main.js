@@ -51,7 +51,6 @@ var $overlay = $('<div id="overlay"></div>');
 var $image = $("<img>");
 var $videos = $("<iframe frameborder='0' allowfullscreen> </iframe>");
 var $caption = $("<p></p>");
-var selected;
 var $index;
 var overlayActive = false;
 
@@ -94,11 +93,11 @@ function loadInfo(item){
 
 if (item.hasClass("video")) {
   $overlay.append($videos);
-    $image.detach()} 
+    $image.detach();} 
   else {
 $overlay.append($image);
   $videos.detach();
-};
+}
 
 
 //A caption to overlay
@@ -118,7 +117,7 @@ $overlay.append($caption);
   var captionText = item.find('span').text();
   //Set overlay caption text
   $caption.text(captionText);
-};
+}
 
 
 
