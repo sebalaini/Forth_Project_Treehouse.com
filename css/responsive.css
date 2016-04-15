@@ -18,13 +18,13 @@ input[type="search"] {
 
 #overlay img,
 #overlay iframe {
-	margin-top: 320px;
+	margin-top: 200px;
 	width: 250px;
 	height: 30%; 
 }
 
 #overlay p {
-	max-width: 300px;
+	max-width: 240px;
 }
 
 #btnPrev {
@@ -32,7 +32,7 @@ input[type="search"] {
   position: absolute;
   float: left;
   top: 45%;
-  left: 5%;
+  left: 0.4%;
 }
 
 #btnNext {
@@ -40,7 +40,33 @@ input[type="search"] {
   position: absolute;
   float: right;
   top: 45%;
-  right: 5%;
+  right: 0.4%;
+}
+
+}
+
+
+
+@media screen and (min-width: 500px) {
+
+#overlay img,
+#overlay iframe {
+	margin-top: 200px;
+	width: 350px;
+	height: 45%; 
+	margin-top: 100px;
+}
+
+#overlay p {
+	max-width: 330px;
+}
+
+#btnPrev {
+  left: 2%;
+}
+
+#btnNext {
+  right: 2%;
 }
 
 }
@@ -73,7 +99,7 @@ input[type="search"] {
 }
 
 #overlay p {
-	max-width: 400px;
+	max-width: 430px;
 }
 
 #btnPrev {
@@ -126,3 +152,7 @@ input[type="search"] {
 }
 
 }
+
+
+
+
