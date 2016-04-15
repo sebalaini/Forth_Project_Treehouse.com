@@ -4,12 +4,12 @@ header,
 footer,
 .wrapper,
 .gallery {
-	max-width: 400px;
+	max-width: 500px;
 }
 
 .gallery img {
-  width: 220px;
-  height: 220px;
+  width: 160px;
+  height: 160px;
 }
 
 input[type="search"] {
