@@ -1,4 +1,3 @@
 # Forth_Project_Treehouse.com
-Forth_Project_Treehouse.com
 
-this is the forth project at treehouse.com where i have to create a gallery with jquery
+The forth project at Treehouse.com in this project i have to create a image gallery with jquery, based on a mockup and write my own Jquery code without use an API
